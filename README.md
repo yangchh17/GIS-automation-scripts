@@ -5,66 +5,6 @@ This repository is a home for GIS-focused automation scripts, notebooks, and hel
 
 The goal is to keep the repository focused on code and workflow, not on project-specific data. Scripts in this repo should be reusable, documented, and safe to share without exposing internal folder structures, network drives, client names, or local machine details.
 
-## Recommended Repository Approach
-
-For your use case, I would recommend **one GIS automation repository with multiple scripts inside it**, rather than a separate GitHub repo for every script.
-
-That works best when:
-
-- the scripts are all part of the same ArcGIS Pro / ArcPy workflow ecosystem
-- they share similar setup requirements
-- you want one place for documentation, version history, and improvements
-- some scripts will eventually reuse helper functions from other scripts
-
-I would only split scripts into separate repositories if:
-
-- a script becomes large enough to behave like its own standalone tool
-- different scripts have very different dependencies or audiences
-- some scripts can be shared publicly while others must stay private
-- release cycles and maintenance ownership are clearly separate
-
-For most internal GIS automation work, a **single repo with good folder structure** is the simpler and more maintainable starting point.
-
-## Suggested Repository Structure
-
-```text
-gis-automation-scripts/
-├── README.md
-├── notebooks/
-│   └── AutoDataImporter.ipynb
-├── scripts/
-│   └── sanitize_notebook.py
-├── shared/
-│   └── helpers/
-├── docs/
-│   └── examples/
-└── .gitignore
-```
-
-A good rule is:
-
-- put reusable Python utilities in `scripts/` or `shared/`
-- keep exploratory or ArcGIS Pro-driven workflows in `notebooks/`
-- document each major workflow in this main README, or add a local README beside it if the tool grows
-
-## Repository Scope
-
-This repo is intended for scripts such as:
-
-- spatial data import and cleanup
-- layer organization in ArcGIS Pro
-- file inventory and QA checks
-- geodatabase preparation
-- batch conversion of GIS file formats
-- repeatable map production support tasks
-
-What should **not** go into the repository:
-
-- raw client/project datasets
-- geodatabases with sensitive content
-- exported maps or reports containing restricted information
-- notebook outputs that reveal drive letters, project names, or internal file paths
-
 ## Script Overview: AutoDataImporter
 
 `AutoDataImporter.ipynb` is an ArcGIS Pro / ArcPy notebook for **bulk-importing spatial data files from a folder tree into the current ArcGIS Pro project**, while organizing the imported layers by project folder.
