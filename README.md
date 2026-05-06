@@ -12,6 +12,3 @@ It groups imported layers by folder, uses a scratch geodatabase, and prints a su
 
 Before running it, update the input folder path and scratch geodatabase path in the configuration cell.
 
-## Notes
-
-This GitHub-safe version has had saved outputs and local/internal paths removed before sharing.
