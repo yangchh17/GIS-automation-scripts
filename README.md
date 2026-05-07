@@ -4,7 +4,7 @@ Small GIS automation repository for ArcGIS Pro, ArcPy, and related data-processi
 
 This repo is meant to store reusable scripts and notebooks that speed up common GIS tasks such as importing files, organizing layers, and preparing data for mapping.
 
-## AutoDataImporter
+## Auto Data Importer
 
 `AutoDataImporter.ipynb` is a notebook that scans a folder for spatial files like `.kml`, `.kmz`, and `.shp`, then adds them into the current ArcGIS Pro map.
 
