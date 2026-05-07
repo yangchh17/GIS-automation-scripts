@@ -12,3 +12,11 @@ It groups imported layers by folder, uses a scratch geodatabase, and prints a su
 
 Before running it, update the input folder path and scratch geodatabase path in the configuration cell.
 
+## PDF to TIFF Converter
+
+`PDFtoTIFF.ipynb` is a notebook that converts single-page PDFs to TIFF using `arcpy.conversion.PDFToTIFF`.
+ 
+ Configure the input and output folders in the configuration cell, or set these environment variables before running:
+ - `PDF_TO_TIFF_INPUT_DIR`
+ - `PDF_TO_TIFF_OUTPUT_DIR`
+ - `PDF_TO_TIFF_DPI`
