@@ -14,7 +14,7 @@ Before running it, update the input folder path and scratch geodatabase path in 
 
 ## PDF to TIFF Converter
 
-`PDFtoTIFF.ipynb` is a notebook that converts single-page PDFs to TIFF using `arcpy.conversion.PDFToTIFF`.
+[PDFtoTIFF.ipynb](https://github.com/yangchh17/GIS-automation-scripts/blob/main/PDFtoTIFF.ipynb) is a notebook that converts single-page PDFs to TIFF using `arcpy.conversion.PDFToTIFF`.
  
  Configure the input and output folders in the configuration cell, or set these environment variables before running:
  - `PDF_TO_TIFF_INPUT_DIR`
