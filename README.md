@@ -23,3 +23,10 @@ Before running it, update the input folder path and scratch geodatabase path in 
 
 ## Batch Land Use Segmentation
 A batch pipeline for land use classification of aerial/satellite imagery tiles using LangSAM (Language-Segment-Anything). Outputs per-class vector files (GeoPackage) merged across all tiles.
+
+What It Does
+ - `Scans an input directory for .tif tiles`
+ - `Skips tiles that are mostly nodata/black`
+ - `Runs LangSAM text-prompted segmentation for each land use class`
+ - `Assigns any unclassified pixels to a "plantable" class`
+ - `Vectorizes results and merges them per class into final GeoPackages`
