@@ -20,3 +20,6 @@ Before running it, update the input folder path and scratch geodatabase path in 
  - `PDF_TO_TIFF_INPUT_DIR`
  - `PDF_TO_TIFF_OUTPUT_DIR`
  - `PDF_TO_TIFF_DPI`
+
+## Batch Land Use Segmentation
+A batch pipeline for land use classification of aerial/satellite imagery tiles using LangSAM (Language-Segment-Anything). Outputs per-class vector files (GeoPackage) merged across all tiles.
