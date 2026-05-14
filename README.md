@@ -22,7 +22,7 @@ Before running it, update the input folder path and scratch geodatabase path in 
  - `PDF_TO_TIFF_DPI`
 
 ## Batch Land Use Segmentation
-[landuse_langsam_pipiline.py]A batch pipeline for land use classification of aerial/satellite imagery tiles using LangSAM (Language-Segment-Anything). Outputs per-class vector files (GeoPackage) merged across all tiles.
+[landuse_langsam_pipiline.py](https://github.com/yangchh17/GIS-automation-scripts/blob/main/landuse_langsam_pipiline.py) A batch pipeline for land use classification of aerial/satellite imagery tiles using LangSAM (Language-Segment-Anything). Outputs per-class vector files (GeoPackage) merged across all tiles.
 
 What It Does
  - `Scans an input directory for .tif tiles`
