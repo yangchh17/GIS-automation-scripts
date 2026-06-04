@@ -32,6 +32,34 @@ What It Does
  - `Vectorizes results and merges them per class into final GeoPackages`
 
 
+## LAS → RGB orthophoto (Cloud-Optimized GeoTIFF)
+
+Generates an RGB orthophoto as a Cloud-Optimized GeoTIFF (COG) from a colorized
+LAS point cloud. Pure Python via PDAL and GDAL bindings — no subprocess calls.
+
+Steps:
+
+1. Sample the LAS to auto-detect RGB bit depth (8-bit vs 16-bit).
+2. Rasterize the Red, Green, Blue channels separately (PDAL `writers.gdal`, IDW
+   interpolation) at the chosen resolution (default 5 cm).
+3. Merge the three bands into one RGB GeoTIFF.
+4. Rescale 16-bit → 8-bit with a 2–98 percentile stretch (skipped if already 8-bit).
+5. Build overviews and write an LZW-compressed COG, then validate it.
+
+Intermediate `_tmp_*` files are cleaned up automatically.
+
+### Usage
+
+```bash
+conda install -c conda-forge pdal python-pdal gdal numpy
+python las_to_orthophoto_cog.py --input cloud.las --output out_dir
+```
+
+Or edit `INPUT_LAS` / `OUTPUT_DIR` in the config block and run directly. Options:
+`--resolution` (metres, default `0.05`) and `--all-returns` (default uses
+first returns only for a cleaner surface). The notebook also runs cell-by-cell.
+
+
 ## Dominant categorical-raster class per polygon
 
 Summarises a single-band integer (categorical) raster over a set of polygons.
