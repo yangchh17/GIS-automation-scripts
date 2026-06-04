@@ -30,3 +30,29 @@ What It Does
  - `Runs LangSAM text-prompted segmentation for each land use class`
  - `Assigns any unclassified pixels to a "plantable" class`
  - `Vectorizes results and merges them per class into final GeoPackages`
+
+
+## Dominant categorical-raster class per polygon
+
+Summarises a single-band integer (categorical) raster over a set of polygons.
+Set up for the DataBC Soil Parent Material raster (`HaBC_PM.tif`), but works for
+any categorical raster if `CLASS_NAMES` matches your class codes. Assumes a
+projected CRS in metres.
+
+Outputs (written to `output/`):
+
+- **`dominant_class.csv`** — dominant class per polygon (modal by pixel count;
+  nearest-pixel inference for empty/sparse polygons).
+- **`class_composition.csv`** — full area-weighted class breakdown per polygon.
+- **`class_top3.csv`** — wide table, top 3 classes per polygon.
+
+### Usage
+
+```bash
+pip install numpy pandas geopandas rasterio shapely scipy
+python dominant_class_per_polygon.py
+```
+
+Edit the config block at the top first: `RASTER_PATH`, `VECTOR_PATH`, `ID_FIELD`
+(unique polygon label), optional `NUM_FIELD`, and `CLASS_NAMES`. The file is
+structured as `# %%` cells, so it also runs cell-by-cell in VS Code or Jupyter.
