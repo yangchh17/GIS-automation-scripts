@@ -62,7 +62,7 @@ first returns only for a cleaner surface). The notebook also runs cell-by-cell.
 
 ## Dominant categorical-raster class per polygon
 
-Summarises a single-band integer (categorical) raster over a set of polygons.
+[dominant_class_per_polygon.py](https://github.com/yangchh17/GIS-automation-scripts/blob/main/dominant_class_per_polygon.py) Summarises a single-band integer (categorical) raster over a set of polygons.
 Set up for the DataBC Soil Parent Material raster (`HaBC_PM.tif`), but works for
 any categorical raster if `CLASS_NAMES` matches your class codes. Assumes a
 projected CRS in metres.
