@@ -34,7 +34,7 @@ What It Does
 
 ## LAS → RGB orthophoto (Cloud-Optimized GeoTIFF)
 
-[las2rgb.py.ipynb](https://github.com/yangchh17/GIS-automation-scripts/blob/main/las2rgb.py.ipynb) Generates an RGB orthophoto as a Cloud-Optimized GeoTIFF (COG) from a colorized
+[Las2RGB.py.ipynb](https://github.com/yangchh17/GIS-automation-scripts/blob/main/las2rgb.py.ipynb) Generates an RGB orthophoto as a Cloud-Optimized GeoTIFF (COG) from a colorized
 LAS point cloud. Pure Python via PDAL and GDAL bindings — no subprocess calls.
 
 Steps:
